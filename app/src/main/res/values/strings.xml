@@ -1,0 +1,15 @@
+<resources>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="app_name">PRACT1_farnosov_10.11.2022</string>
+    <string name="DoList">Cписок дел</string>
+    <string name="add_task">Добавить задачу</string>
+    Добавить задачу
+    <string name="Settings">Settings</string>
+    <string name="Alarm">Alarm</string>
+    <string name="List">List</string>
+    <string name="Setting">Setting</string>
+    <string name="Calender">Calender</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_user_login">UserLogin</string>
+</resources>
