@@ -154,7 +154,7 @@ class MainActivity : ComponentActivity() {
                             .fillMaxWidth()
                             .weight(0.02f))
                         {
-                            down_butons(Color.Red,Color.Red,Color.Red, MyGreenLight,R.drawable.calendar,R.drawable.settings,R.drawable.alarm,R.drawable.list)
+                           AlarmActivity().down_butons(Color.Red,Color.Red,Color.Red, MyGreenLight,R.drawable.calendar,R.drawable.settings,R.drawable.alarm,R.drawable.list)
 
                         }
                     }
@@ -215,9 +215,9 @@ class MainActivity : ComponentActivity() {
                     up_panel(stringResource(R.string.DoList))
 
                 }
-                Row() {
+                Row(modifier = Modifier.offset(y=655.dp)) {
 
-                    Button_add_task("добавить задачу")
+                 AlarmActivity().Button_add_task("Добавить задачу")
                 }
 
 
@@ -239,11 +239,11 @@ class MainActivity : ComponentActivity() {
         ) {
             Spacer(modifier = Modifier.size(677.dp))
             Button(
-                {val intent = Intent(this@MainActivity,UserLogin  ::class.java)
+                {val intent = Intent(this@MainActivity,AddTaskActivity  ::class.java)
                     startActivity(intent)},
                 colors = ButtonDefaults.buttonColors(backgroundColor = MyGreend),
                 modifier = Modifier
-                    .size(400.dp, 50.dp)
+                    .size(400.dp, 60.dp)
                     .clip(RoundedCornerShape(10))
                     .offset(x = 22.dp, y = (0).dp)
             )
@@ -278,7 +278,7 @@ class MainActivity : ComponentActivity() {
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(60.dp)
-                .offset(x = 200.dp, y = 5.dp)
+                .offset(x = 201.dp, y = 10.dp)
         )
 
     }

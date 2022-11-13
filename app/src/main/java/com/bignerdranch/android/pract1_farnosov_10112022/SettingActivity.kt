@@ -38,7 +38,7 @@ class SettingActivity : ComponentActivity() {
                             .weight(0.07f)
                     )
                     {
-                        up_panel("Настройки")
+                        AlarmActivity().up_panel("Настройки")
                     }
                     Box(
                         modifier = Modifier
@@ -67,7 +67,7 @@ class SettingActivity : ComponentActivity() {
                             .weight(0.08f)
                     )
                     {
-                        down_butons(
+                       AlarmActivity().down_butons(
                             MyGreenLight,
                             Color.Red,
                             Color.Red,

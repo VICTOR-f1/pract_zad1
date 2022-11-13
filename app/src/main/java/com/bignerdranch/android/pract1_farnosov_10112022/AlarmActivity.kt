@@ -1,20 +1,14 @@
 package com.bignerdranch.android.pract1_farnosov_10112022
 
 import android.content.Intent
-import android.inputmethodservice.Keyboard
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Arrangement.Absolute.Center
-import androidx.compose.foundation.layout.Arrangement.Absolute.SpaceAround
-import androidx.compose.foundation.layout.Arrangement.Absolute.SpaceBetween
-import androidx.compose.foundation.layout.Arrangement.Center
-import androidx.compose.foundation.layout.Arrangement.SpaceAround
-import androidx.compose.foundation.layout.Arrangement.SpaceBetween
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -25,17 +19,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.HorizontalAlignmentLine
-import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
-import androidx.navigation.Navigation
 import com.bignerdranch.android.pract1_farnosov_10112022.ui.theme.MyGreenLight
 import com.bignerdranch.android.pract1_farnosov_10112022.ui.theme.MyGreend
 import com.bignerdranch.android.pract1_farnosov_10112022.ui.theme.PRACT1_farnosov_10112022Theme
@@ -82,7 +71,7 @@ class AlarmActivity : ComponentActivity() {
             }
         }
     }
-}
+
 
 @Composable
 fun up_panel(value: String) {
@@ -113,7 +102,10 @@ fun center(value: String) {
 
         val checkedState = remember { mutableStateOf(false) }
         val textColor = remember { mutableStateOf(Color.Unspecified) }
-        Column(modifier = Modifier.fillMaxSize().padding(0.dp).offset(20.dp,0.dp)){
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .padding(0.dp)
+            .offset(20.dp, 0.dp)){
             Row (verticalAlignment = Alignment.CenterVertically ){
                 Text("07:30", fontSize = 52.sp, color = Color.White)
                 Switch(
@@ -142,13 +134,38 @@ fun Button_add_task(value: String) {
 Column( modifier = Modifier
     .offset(x = 0.dp, y = (15).dp)
     .fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center){
-    
+var addAlarmActiviti:Int=0
+    var addTaskActiviti:Int=0
 
+    val context = LocalContext.current
+
+val s1:String    = getClass().getSimpleName()
+    Toast.makeText(
+        context,
+        "$s1",
+        Toast.LENGTH_SHORT
+    ).show()
+
+    if(s1 =="MainActivity"){
+    addTaskActiviti++
+   }
+    if(s1=="AlarmActivity"){
+        addAlarmActiviti++
+    }
     Button(
-        {  },
+        onClick = {
+            if(addTaskActiviti>0)
+            {
+                context.startActivity(Intent(context, AddTaskActivity::class.java))
+            }
+            if(addAlarmActiviti>0)
+            {
+                context.startActivity(Intent(context, CreateAlarmActivity::class.java))
+            }
+        },
         colors = ButtonDefaults.buttonColors(backgroundColor = MyGreend),
         modifier = Modifier
-            .size(400.dp, 50.dp)
+            .size(400.dp, 60.dp)
             .clip(RoundedCornerShape(10))
             .offset(x = 0.dp, y = (0).dp)
     )
@@ -197,8 +214,8 @@ fun down_butons(color1: Color,color2: Color,color23: Color,color24: Color,image:
                 .offset(x = 45.dp, y = 18.dp)
                 .clickable(
                     onClick = {
-                       /* val intent = Intent(context,SettingActivity::class.java)
-                        startActivity(intent)*/
+                        context.startActivity(Intent(context, MainActivity::class.java))
+
                     }
                 )
         )
@@ -209,6 +226,12 @@ fun down_butons(color1: Color,color2: Color,color23: Color,color24: Color,image:
             modifier = Modifier
                 .size(40.dp)
                 .offset(x = 118.dp, y = 18.dp)
+                .clickable(
+                    onClick = {
+                        context.startActivity(Intent(context, AlarmActivity::class.java))
+
+                    }
+                )
         )
         Image(
             painter = painterResource(id = image),
@@ -217,6 +240,11 @@ fun down_butons(color1: Color,color2: Color,color23: Color,color24: Color,image:
             modifier = Modifier
                 .size(40.dp)
                 .offset(x = 192.dp, y = 18.dp)
+                .clickable(
+                    onClick = {
+                        context.startActivity(Intent(context, CalendarActivity::class.java))
+                    }
+                )
 
         )
         Image(
@@ -226,6 +254,12 @@ fun down_butons(color1: Color,color2: Color,color23: Color,color24: Color,image:
             modifier = Modifier
                 .size(40.dp)
                 .offset(x = 270.dp, y = 19.dp)
+                .clickable(
+                    onClick = {
+                        context.startActivity(Intent(context, SettingActivity::class.java))
+
+                    }
+                )
         )
             Text(
                 text = stringResource(R.string.List),
@@ -258,4 +292,5 @@ fun down_butons(color1: Color,color2: Color,color23: Color,color24: Color,image:
         }
     }
 
+}
 }

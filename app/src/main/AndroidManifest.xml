@@ -13,6 +13,60 @@
         android:theme="@style/Theme.PRACT1_farnosov_10112022"
         tools:targetApi="31">
         <activity
+            android:name=".UserLogin2"
+            android:exported="false"
+            android:label="@string/title_activity_user_login2"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditAlarm"
+            android:exported="false"
+            android:label="@string/title_activity_edit_alarm"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CreateAlarmActivity"
+            android:exported="false"
+            android:label="@string/title_activity_create_alarm"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AddTaskActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_task"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditTaskActivity"
+            android:exported="false"
+            android:label="@string/title_activity_edit_task"
+            android:theme="@style/Theme.PRACT1_farnosov_10112022">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UserLogin"
             android:exported="false"
             android:label="@string/title_activity_user_login"

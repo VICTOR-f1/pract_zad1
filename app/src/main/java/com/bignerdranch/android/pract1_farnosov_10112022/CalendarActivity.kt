@@ -36,7 +36,7 @@ class CalendarActivity : ComponentActivity() {
                         .fillMaxWidth()
                         .weight(0.07f))
                     {
-                        up_panel("Будильник")
+                       AlarmActivity().up_panel("Будильник")
                     }
                     Box(modifier = Modifier
                         .background(Color.Yellow)
@@ -59,7 +59,7 @@ class CalendarActivity : ComponentActivity() {
                         .fillMaxWidth()
                         .weight(0.08f))
                     {
-                        down_butons(MyGreenLight,Color.Red, Color.Red, Color.Red,R.drawable.green_spisok,R.drawable.settings,R.drawable.alarm                            ,R.drawable.red_list
+                       AlarmActivity().down_butons(MyGreenLight,Color.Red, Color.Red, Color.Red,R.drawable.green_spisok,R.drawable.settings,R.drawable.alarm                            ,R.drawable.red_list
                         )
                 }
             }
