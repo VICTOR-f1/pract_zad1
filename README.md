@@ -1,3 +1,4 @@
 # pract_zad1!
-[ezgif com-video-to-gif](https://user-images.githubusercontent.com/100849703/201531769-8af05f97-beca-4e86-a543-24f66ee7019c.gif)
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/100849703/201531770-d8662764-5626-4357-ad24-42238a10bd40.gif)
+![Uploading ezgif.com-gif-maker.gif…]()
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/100849703/201531810-901a1992-b565-40f2-81bf-039f969193d9.gif)
