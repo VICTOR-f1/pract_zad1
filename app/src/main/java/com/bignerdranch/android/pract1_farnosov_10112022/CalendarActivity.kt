@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -31,54 +32,74 @@ class CalendarActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Column()
                 {
-                    Box(modifier = Modifier
-                        .background(MyGreenLight)
-                        .fillMaxWidth()
-                        .weight(0.07f))
+                    Box(
+                        modifier = Modifier
+                            .background(MyGreenLight)
+                            .fillMaxWidth()
+                            .weight(0.07f)
+                    )
                     {
-                       AlarmActivity().up_panel("Будильник")
+                        AlarmActivity().up_panel("Будильник")
                     }
-                    Box(modifier = Modifier
-                        .background(Color.Yellow)
-                        .fillMaxWidth()
-                        .weight(0.38f))
+                    Box(
+                        modifier = Modifier
+                            .background(MyGreenLight)
+                            .fillMaxWidth()
+                            .weight(0.38f)
+                    )
                     {
                         centerCalender("d")
                     }
-                    Box(modifier = Modifier
-                        .background(MyGreenLight)
-                        .fillMaxWidth()
-                        .weight(0.06f))
+                    Box(
+                        modifier = Modifier
+                            .background(MyGreenLight)
+                            .fillMaxWidth()
+                            .weight(0.06f)
+                    )
                     {
 
                     }
 
 
-                    Box(modifier = Modifier
-                        .background(MyGreenLight)
-                        .fillMaxWidth()
-                        .weight(0.08f))
+                    Box(
+                        modifier = Modifier
+                            .background(MyGreenLight)
+                            .fillMaxWidth()
+                            .weight(0.08f)
+                    )
                     {
-                       AlarmActivity().down_butons(MyGreenLight,Color.Red, Color.Red, Color.Red,R.drawable.green_spisok,R.drawable.settings,R.drawable.alarm                            ,R.drawable.red_list
+                        AlarmActivity().down_butons(
+                            MyGreenLight,
+                            Color.Red,
+                            Color.Red,
+                            Color.Red,
+                            R.drawable.green_spisok,
+                            R.drawable.settings,
+                            R.drawable.alarm,
+                            R.drawable.red_list
                         )
+                    }
                 }
             }
         }
     }
-}
 
-@Composable
-fun centerCalender(value: String) {
+    @Composable
+    fun centerCalender(value: String) {
 
 
-    AndroidView({CalendarView(it)}, modifier = Modifier.wrapContentWidth(),
-    update = {view->
-        view.setOnDateChangeListener{calendarView,i,i2,i3->
-            
-        }
+        AndroidView({ CalendarView(it) },
+            modifier = Modifier
+                .size(450.dp, 700.dp)
+                .background(MyGreenLight)
+                .offset(x = (-6).dp, y = (-28).dp),
+            update = { view ->
+                view.setOnDateChangeListener { calendarView, i, i2, i3 ->
 
-    })
+                }
 
-}
+            })
+
+    }
 }
 

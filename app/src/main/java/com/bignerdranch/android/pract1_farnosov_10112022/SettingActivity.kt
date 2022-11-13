@@ -68,12 +68,12 @@ class SettingActivity : ComponentActivity() {
                     )
                     {
                        AlarmActivity().down_butons(
+                            Color.Red,
                             MyGreenLight,
                             Color.Red,
                             Color.Red,
-                            Color.Red,
-                            R.drawable.green_spisok,
-                            R.drawable.settings,
+                            R.drawable.calendar,
+                            R.drawable.green_setting,
                             R.drawable.alarm
                             ,R.drawable.red_list
                         )

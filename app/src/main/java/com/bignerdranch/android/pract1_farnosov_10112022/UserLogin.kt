@@ -1,15 +1,21 @@
 package com.bignerdranch.android.pract1_farnosov_10112022
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
+import androidx.activity.compose.BackHandler
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -41,6 +47,7 @@ class UserLogin : ComponentActivity() {
                     )
                     {
                         up_panel2("Регестрация")
+
                     }
                     Box(
                         modifier = Modifier
@@ -103,7 +110,14 @@ class UserLogin : ComponentActivity() {
             modifier = Modifier
                 .size(60.dp)
                 .offset(x = 344.dp, y = 10.dp)
+                .clickable(
+                    onClick = {
+
+
+                    }
+                )
         )
+
 
     }
 
@@ -147,4 +161,5 @@ class UserLogin : ComponentActivity() {
 
 
     }
+
 }

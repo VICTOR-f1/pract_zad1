@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -52,6 +53,7 @@ class MainActivity : ComponentActivity() {
                             .fillMaxWidth()
                             .wrapContentSize(Alignment.Center)
                     ) {
+                        val context = LocalContext.current
 
                         Spacer(modifier = Modifier.size(100.dp))
                         Box(
@@ -65,6 +67,12 @@ class MainActivity : ComponentActivity() {
                                         bottomEnd = 30.dp,
                                         bottomStart = 0.dp
                                     )
+                                )
+                                .clickable(
+                                    onClick = {
+                                        context.startActivity(Intent(context, EditTaskActivity::class.java))
+
+                                    }
                                 )
                                 .background(MyOrange)
                         ) {
@@ -98,6 +106,12 @@ class MainActivity : ComponentActivity() {
                                         bottomStart = 0.dp
                                     )
                                 )
+                                .clickable(
+                                    onClick = {
+                                        context.startActivity(Intent(context, EditTaskActivity::class.java))
+
+                                    }
+                                )
                                 .background(MyOrange)
                         ) {
                             Row() {}
@@ -130,6 +144,12 @@ class MainActivity : ComponentActivity() {
                                         bottomEnd = 50.dp,
                                         bottomStart = 0.dp
                                     )
+                                )
+                                .clickable(
+                                    onClick = {
+                                        context.startActivity(Intent(context, EditTaskActivity::class.java))
+
+                                    }
                                 )
                                 .background(MyOrange)
                         ) {
@@ -272,6 +292,8 @@ class MainActivity : ComponentActivity() {
 
 
         )
+        val context = LocalContext.current
+
         Image(
             painter = painterResource(id = R.drawable.is_avatarka),
             contentDescription = null,
@@ -279,6 +301,12 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier
                 .size(60.dp)
                 .offset(x = 201.dp, y = 10.dp)
+                .clickable(
+                    onClick = {
+                        context.startActivity(Intent(context, ProfileActivity::class.java))
+
+                    }
+                )
         )
 
     }

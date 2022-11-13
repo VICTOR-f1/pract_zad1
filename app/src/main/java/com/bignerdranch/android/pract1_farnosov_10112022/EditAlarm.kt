@@ -29,7 +29,7 @@ class EditAlarm : ComponentActivity() {
                             .weight(0.03f)
                     )
                     {
-                        UserLogin().up_panel2("Добавить будильник")
+                        UserLogin().up_panel2("Изменить будильник")
                     }
                     Box(
                         modifier = Modifier

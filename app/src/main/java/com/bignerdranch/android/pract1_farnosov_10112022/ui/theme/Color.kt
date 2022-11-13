@@ -9,4 +9,6 @@ val Teal200 = Color(0xFF03DAC5)
 val MyGreend = Color(0xFFAAF683)
 val MyOrange = Color(0xFFFFD97D)
 val MyGray = Color(0xFFEBEBEB)
+val MyRed = Color(0xFFFF9B85)
+
 

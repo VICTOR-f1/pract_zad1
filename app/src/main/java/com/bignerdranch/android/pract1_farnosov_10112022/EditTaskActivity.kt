@@ -130,7 +130,7 @@ class EditTaskActivity : ComponentActivity() {
                 .background(Color.White)
         )
         Image(
-            painter = painterResource(id = R.drawable.calendar),
+            painter = painterResource(id = R.drawable.microcalendar),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
